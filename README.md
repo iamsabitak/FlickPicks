@@ -17,5 +17,3 @@ Discover movies based on your preferences.
 View movie details such as ratings, cast, and summaries.
 Save your favorite movies.
 Contributing
-
-Contributions are welcome!

@@ -18,8 +18,4 @@ View movie details such as ratings, cast, and summaries.
 Save your favorite movies.
 Contributing
 
-Contributions are welcome! If you'd like to contribute to FlickPicks, please follow our contribution guidelines.
-
-License
-
-This project is licensed under the MIT License.
+Contributions are welcome!

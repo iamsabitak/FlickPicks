@@ -1,0 +1,30 @@
+/* Movie.css */
+
+body {
+    background-color: #1f1f1f;
+    color: #fff;
+  }
+  
+  .movie-list {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 50px auto 0; /* Updated margin-top to 50px */
+    background-color: #333;
+  }
+  
+  .movie-item {
+    list-style: none;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #444;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .movie-item:hover {
+    background-color: #555;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,73 @@
+/* FlickPicks.css */
+
+.flickpicks-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .search-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    
+  }
+  
+  .search-input {
+    width: 70%;
+    max-width: 800px;
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid #ddd; /* Adding border */
+    border-radius: 30px;
+    outline: none; /* Removing default input outline */
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .search-input::placeholder {
+    color: #888; /* Placeholder color */
+  }
+  
+  .search-button {
+    padding: 15px 30px;
+    margin-top: 20px;
+    font-size: 18px;
+    background-color: #e50914; /* Bflix red color */
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-button:hover {
+    background-color: #be0812; /* Darker red on hover */
+  }
+  
+  /* FlickPicks.css */
+
+.flickpicks-container {
+    background-color: #1c1c1c; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 20px;
+    margin: auto;
+    width: 80%;
+  }
+  
+  .flickpicks-content {
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  
+  h2 {
+    color: #ffa500; /* Orange color for headers */
+    margin-top: 30px; /* Add some space between sections */
+  }
+  
+  p {
+    margin-bottom: 20px; /* Space between paragraphs */
+  }
+  
+  /* You can add more specific styles or adjust these as needed */
+  

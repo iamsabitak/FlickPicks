@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 .movie-list {
   border: 1px solid #ccc;
@@ -10,6 +10,7 @@
   max-width: 220px;
   background-color: #343333;
   transition: transform 0.3s ease;
+  list-style: none;
 }
 .movie-list:hover {
   background-color: #414040;
@@ -33,7 +34,7 @@
   padding: 10px 20px;
   margin-top: 10px;
   font-size: 14px;
-  background-color: #e50914; 
+  background-color: #e50914;
   color: #fff;
   border: none;
   border-radius: 30px;
@@ -45,6 +46,12 @@
 }
 .Add-to-Card:hover {
   background-color: #be0812;
+}
+.loader {
+  color: #ffa500;
+  display: flex;
+  margin-top: 8rem;
+  justify-content: center;
 }
 @media only screen and (min-width: 300px) and (max-width: 900px) {
   .movie-container {
@@ -68,4 +75,3 @@
     margin: 10px;
   }
 }
-

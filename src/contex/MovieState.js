@@ -4,9 +4,10 @@ import MovieContext from "./MovieContex";
 
 function MovieState({ children }) {
   const [movie, setMovie] = useState([]);
-  const [query, setQuery] = useState("Shinchan");
+  const [query, setQuery] = useState("Doraemon");
   const [error, setError] = useState({ msg: "", show: "fasle" });
   const [isloading, setIsloading] = useState(true);
+  const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
     setIsloading(true);
@@ -30,7 +31,7 @@ function MovieState({ children }) {
               msg: data.Error,
             });
           }
-          console.log(data.Search, "rendered");
+          // console.log(data.Search, "rendered");
         } catch (error) {
           console.log(error, "Something went wrong");
         }
@@ -40,8 +41,50 @@ function MovieState({ children }) {
 
     return () => clearTimeout(timerOut);
   }, [query]);
+
+  const addToFavorites = (selectedMovie) => {
+    const newFavorites = [...favorites, selectedMovie];
+    setFavorites(newFavorites);
+    localStorage.setItem("favorites", JSON.stringify(newFavorites));
+  };
+
+  useEffect(() => {
+    const storedFavorites =localStorage.getItem("favorites");
+    if (storedFavorites) {
+      setFavorites( JSON.parse(storedFavorites));
+    }
+  }, []);
+
+  // const addToFavorites = (selectedMovie) => {
+  //   setFavorites([...favorites, selectedMovie]);
+  // };
+
+  const deletefromFavourite = (imdbID) => {
+    const updatedFavorites = favorites.filter(
+      (favorite) => favorite.imdbID !== imdbID
+    );
+    setFavorites(updatedFavorites);
+    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+  };
+  // const deletefromFavourite = (imdbID) => {
+  //   setFavorites((prevFavorites) =>
+  //     prevFavorites.filter((favorite) => favorite.imdbID !== imdbID)
+  //   );
+  // };
+
   return (
-    <MovieContext.Provider value={{ movie, query, setQuery, error, isloading }}>
+    <MovieContext.Provider
+      value={{
+        movie,
+        query,
+        setQuery,
+        error,
+        isloading,
+        addToFavorites,
+        favorites,
+        deletefromFavourite,
+      }}
+    >
       {children}
     </MovieContext.Provider>
   );

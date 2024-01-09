@@ -1,0 +1,37 @@
+.navbar {
+  background-color: #151313;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+
+.flickpicks {
+  text-decoration: none;
+  color:#ffa500;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 15px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 17px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #e50914;
+}

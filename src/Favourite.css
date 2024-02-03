@@ -10,8 +10,8 @@
   border-radius: 10px;
   max-width: 220px;
   background-color: #343333;
-  transition: transform 0.3s ease;
   list-style: none;
+  transition: transform 0.3s ease;
 }
 
 .Favourite-list:hover {

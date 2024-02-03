@@ -3,10 +3,10 @@ import { useGlobalContext } from "./contex/MovieState";
 import "./Movie.css";
 
 function Movie() {
-  const { movie, isloading, addToFavorites,favorites } = useGlobalContext();
+  const { movie, isloading, addToFavorites, favorites } = useGlobalContext();
 
   const isMovieInFavorites = (imdbID) => {
-    return favorites.some((favorite) => favorite.imdbID === imdbID);
+    return favorites.find((favorite) => favorite.imdbID === imdbID);
   };
 
   if (isloading) {
